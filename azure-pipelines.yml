@@ -13,7 +13,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '153e4f0f-d276-4b05-9bdc-c6b989613335'
   imageRepository: 'zodiaczodiacpipelinesjavascriptdocker'
-  containerRegistry: 'eusdsolacr001.azurecr.io'
+  containerRegistry: 'eusdsolacr001.azurecr.io' 
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'eusdsolacr00111514688-auth'
@@ -63,7 +63,7 @@ stages:
     - task: CmdLine@2
       displayName: Scanning Image ($(vmImageName)) at ${CENTRAL}
       inputs:
-        script: './roxctl image check --insecure-skip-tls-verify -e ${CENTRAL} --image $(vmImageName)'
+        script: './roxctl image check --insecure-skip-tls-verify -e ${CENTRAL} --image $(containerRegistry)/$(imageRepository):$(tag)'
 
     
 
