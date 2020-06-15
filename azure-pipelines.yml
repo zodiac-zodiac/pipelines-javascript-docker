@@ -53,7 +53,7 @@ stages:
       displayName: SCA agent scan
       inputs:
         script: |
-          apt-get -y install expect
+          sudo apt-get -y install expect
           
           curl -sSL https://srcclr.com/install | sh
           
