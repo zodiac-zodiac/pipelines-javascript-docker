@@ -50,6 +50,7 @@ stages:
 
 
     - task: CmdLine@2
+      displayName: SCA agent scan
       inputs:
         script: |
           apt-get -y install expect
