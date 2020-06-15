@@ -81,7 +81,7 @@ stages:
           expect -exact "\r
           Profile name: "
           send -- "test2\r"
-          expect eof' >expect.exp
+          expect eof' > expect.exp
           cat expect.exp
           chmod +x expect.exp
           ./expect.exp
