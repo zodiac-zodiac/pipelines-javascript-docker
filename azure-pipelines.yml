@@ -75,9 +75,13 @@ stages:
           spawn srcclr activate
           match_max 100000
           expect -exact "Activation Token: "
-          send -- "a2929124-5dda-4bb2-a604-5c957e902215"
-          expect -exact "a2929124-5dda-4bb2-a604-5c957e902215"
-          send -- "\r"' > expect.exp
+          send -- "70a99f7b-0a6c-4f1b-9ffc-17df1e9c16c1"
+          expect -exact "70a99f7b-0a6c-4f1b-9ffc-17df1e9c16c1"
+          send -- "\r"
+          expect -exact "\r
+          Profile name: "
+          send -- "test2\r"
+          interact' > expect.exp
           cat expect.exp
           chmod +x expect.exp
           ./expect.exp
