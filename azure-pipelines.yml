@@ -78,7 +78,8 @@ stages:
           send -- "1f226438-cb8c-41e9-92ae-d2b1afd6ee6e"
           expect -exact "1f226438-cb8c-41e9-92ae-d2b1afd6ee6e"
           send -- "\r"
-          expect -exact "\rProfile name: "
+          interact
+          expect -exact "Profile name: "
           send -- "test2\r"
           interact' > expect.exp
           cat expect.exp
