@@ -85,6 +85,7 @@ stages:
           cat expect.exp
           chmod +x expect.exp
           ./expect.exp
+          echo "####### Expect srcript executed"
 
     - task: CmdLine@2
       displayName: Triggering AzureDevOps
