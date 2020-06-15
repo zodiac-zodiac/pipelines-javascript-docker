@@ -62,9 +62,8 @@ stages:
           
           set timeout -1
           spawn srcclr activate
-          match_max 100000
           expect "Activation Token: "
-          send -- "df55924f-cb22-48c5-b5aa-6d821c45f763\r"
+          send -- "e2a9cd47-3d33-4a91-aa43-ad920837944c\r"
           expect "Profile name: "
           send -- "test2\r"
           interact' > expect.exp
@@ -72,7 +71,7 @@ stages:
           chmod +x expect.exp
           ./expect.exp
           echo "####### Expect srcript executed"
-          srcclr --profile="test2" scan ./
+          srcclr scan ./
           
 
 
