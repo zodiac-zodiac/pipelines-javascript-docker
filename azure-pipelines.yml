@@ -60,22 +60,11 @@ stages:
           
           echo '#!/usr/bin/expect -f
           
-          set force_conservative 0  ;# set to 1 to force conservative mode even if
-                  ;# script wasn t run conservatively originally
-          if {$force_conservative} {
-            set send_slow {1 .1}
-            proc send {ignore arg} {
-              sleep .1
-              exp_send -s -- $arg
-            }
-          }
-          
-          
           set timeout -1
           spawn srcclr activate
           match_max 100000
           expect "Activation Token: "
-          send -- "462dc27c-1ef4-484e-94b0-66ec7ff8c5e3\r"
+          send -- "df55924f-cb22-48c5-b5aa-6d821c45f763\r"
           expect "Profile name: "
           send -- "test2\r"
           interact' > expect.exp
