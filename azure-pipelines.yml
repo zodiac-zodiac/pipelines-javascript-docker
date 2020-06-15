@@ -97,14 +97,12 @@ stages:
           
           export CENTRAL=${CENTRAL}
     - task: CmdLine@2
-      displayName: Getting Stackrox client
       inputs:
         script: |
           curl -s -k -H "Authorization: Bearer ${ROX_API_TOKEN}" https://${CENTRAL}/api/cli/download/roxctl-linux --output roxctl
           chmod +x ./roxctl
 
     - task: CmdLine@2
-      displayName: Scanning Image ($(vmImageName)) at ${CENTRAL}
       inputs:
         script: './roxctl image check --insecure-skip-tls-verify -e ${CENTRAL} --image $(containerRegistry)/$(imageRepository):$(tag)'
 
