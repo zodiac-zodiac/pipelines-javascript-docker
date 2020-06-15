@@ -75,8 +75,8 @@ stages:
           spawn srcclr activate
           match_max 100000
           expect -exact "Activation Token: "
-          send -- "520a2da8-93b2-4a2e-be09-bab3dd2cdc49"
-          expect -exact "520a2da8-93b2-4a2e-be09-bab3dd2cdc49"
+          send -- "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQ0NjUyLCJleHAiOjE1OTIyNTcwMjYsImF1dGhvcml0aWVzIjoiQUdFTlQiLCJqdGkiOiIyMGMyZjkyMC1hODdiLTQ2YjktYmY0Yi05M2FiZjllYzc5Y2IiLCJjbGllbnRfaWQiOiIiLCJzY29wZSI6W119.jBPCHcHOmdWx52mpDRYDBIkubpDgtWyAhOoYmNwP2zVEU2t7QouoAtqJ26IEuSaWITZ-EnDho82iXeA9ElAFIY7E6rwbp9Uv6ULKyoBWRmpZSy-hzg3XfyNiZEyxyhn0s1d0VdvuLqgsb2wpHhU5AtLJ2jLA3OdTaLU4ArDXgy0"
+          expect -exact "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQ0NjUyLCJleHAiOjE1OTIyNTcwMjYsImF1dGhvcml0aWVzIjoiQUdFTlQiLCJqdGkiOiIyMGMyZjkyMC1hODdiLTQ2YjktYmY0Yi05M2FiZjllYzc5Y2IiLCJjbGllbnRfaWQiOiIiLCJzY29wZSI6W119.jBPCHcHOmdWx52mpDRYDBIkubpDgtWyAhOoYmNwP2zVEU2t7QouoAtqJ26IEuSaWITZ-EnDho82iXeA9ElAFIY7E6rwbp9Uv6ULKyoBWRmpZSy-hzg3XfyNiZEyxyhn0s1d0VdvuLqgsb2wpHhU5AtLJ2jLA3OdTaLU4ArDXgy0"
           send -- "\r"
           expect -exact "\r
           Profile name: "
