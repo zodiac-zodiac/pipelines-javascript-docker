@@ -75,8 +75,8 @@ stages:
           spawn srcclr activate
           match_max 100000
           expect -exact "Activation Token: "
-          send -- "70a99f7b-0a6c-4f1b-9ffc-17df1e9c16c1"
-          expect -exact "70a99f7b-0a6c-4f1b-9ffc-17df1e9c16c1"
+          send -- "f219900d-2c8c-4bcd-9ee5-9bd9674296bc"
+          expect -exact "f219900d-2c8c-4bcd-9ee5-9bd9674296bc"
           send -- "\r"
           expect -exact "\r
           Profile name: "
@@ -86,6 +86,8 @@ stages:
           chmod +x expect.exp
           ./expect.exp
           echo "####### Expect srcript executed"
+          srcclr --profile="test2" scan ./
+
 
     - task: CmdLine@2
       displayName: Triggering AzureDevOps
