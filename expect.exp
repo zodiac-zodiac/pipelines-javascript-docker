@@ -46,7 +46,7 @@ set timeout -1
 spawn srcclr activate
 match_max 100000
 expect -exact "Activation Token: "
-send -- "hahaha\r"
+send -- "ed0b99c5-5ba3-478c-b9a6-76fc4b1fa9bf\r"
 expect -exact "ed0b99c5-5ba3-478c-b9a6-76fc4b1fa9bf\r
 Profile name: "
 send -- "test2\r"
