@@ -63,9 +63,9 @@ stages:
           set timeout -1
           spawn srcclr activate
           expect "Activation Token: "
-          send -- "6671b532-2901-4a09-b4c8-363339c2c90b\r"
+          send "af9c3804-291a-4c79-a7ba-110852b0ffe3\r"
           expect "Profile name: "
-          send -- "test2\r"
+          send "test2\r"
           expect eof' > expect.exp
           cat expect.exp
           chmod +x expect.exp
