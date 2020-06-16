@@ -64,7 +64,8 @@ stages:
           spawn srcclr activate
           expect -exact "Activation Token: "
           send -- "hahaha\r"
-          expect -exact "hahaha\r\nProfile name: "
+          expect -exact "hahaha\r
+          Profile name: "
           send -- "test2\r"
           expect eof' > expect.exp
           cat expect.exp
