@@ -58,6 +58,7 @@ stages:
           chmod +x expect.exp
           ./expect.exp
           srcclr --profile="test2"  scan ./
+        failOnStderr: false
           
 
 
