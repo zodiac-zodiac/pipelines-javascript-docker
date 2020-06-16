@@ -60,14 +60,11 @@ stages:
           
           echo '#!/usr/bin/expect 
           
-          set timeout -1
+          set timeout 50
           spawn srcclr activate
-          expect -exact "Activation Token: "
-          send -- "hahaha\r"
-          expect -exact "hahaha\r
-          Profile name: "
-          send -- "test2\r"
-          expect eof' > expect.exp
+          expect "Activation Token: " {send "c2b66224-ad48-4e67-98ad-84054c844b8a\r"}
+          expect "Profile name: " {send "test2\r"}
+          interact' > expect.exp
           cat expect.exp
           chmod +x expect.exp
           ./expect.exp
